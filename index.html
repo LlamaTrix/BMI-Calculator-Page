@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+</head>
+<body>
+    <header class="p-3 shadow-sm">
+        <div class="header-content d-lg-flex">
+            <div>
+                <img src="assets/images/logo.png" alt="Logo" class="logo">
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Button</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Button</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Button</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+
+    <section class="hero">
+        <div class="overlay">
+            <div class="hero-text text-center">
+                <h1>Welcome to the BMI Calculator</h1>
+                <p>Calculate your Body Mass Index and get personalized recommendations</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="info-section text-center mb-5">
+                    <h2>What is BMI?</h2>
+                    <p>BMI stands for Body Mass Index. It is a simple calculation using a person's height and weight. The formula is BMI = kg/m² where kg is a person's weight in kilograms and m² is their height in meters squared. It can also be calculated using pounds and inches by using the formula BMI = (weight in pounds / (height in inches x height in inches)) x 703.</p>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <form id="bmi-form">
+                            <div class="form-group">
+                                <label for="height">Height</label>
+                                <input type="number" class="form-control" id="height" placeholder="Enter your height">
+                                <select class="form-control mt-2" id="height-unit">
+                                    <option value="m">Meters</option>
+                                    <option value="cm">Centimeters</option>
+                                    <option value="in">Inches</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="weight">Weight</label>
+                                <input type="number" class="form-control" id="weight" placeholder="Enter your weight">
+                                <select class="form-control mt-2" id="weight-unit">
+                                    <option value="kg">Kilograms</option>
+                                    <option value="lb">Pounds</option>
+                                </select>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-block" onclick="calculateBMI()">Calculate</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="result mt-5 text-center">
+                    <h2 id="bmi-value"></h2>
+                    <p id="bmi-status"></p>
+                    <div id="recommendations"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center p-4 shadow-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p>© 2024 Iván Longaric Montaño</p>
+                </div>
+                <div class="col-md-4">
+                    <p>longaricivan@gmail.com | +591 78644946</p>
+                </div>
+                <div class="col-md-4">
+                    <nav>
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item"><a class="nav-link" href="#">Button</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Button</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Button</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
